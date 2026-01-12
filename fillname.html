@@ -8,22 +8,23 @@
     
 
         <meta property="og:title" content="លិខិតអញ្ជើញសិរីមង្គលអាពាហ៍ពិពាហ៍">
-    <meta name="description" content="គិម ស័កសិទ្ធិ & ងង់ ស្រីមុី">
-    <meta property="og:image" content="https://i.postimg.cc/zfXMzLmL/first.jpg">
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:image" content="https://i.postimg.cc/zfXMzLmL/first.jpg">
-    <link rel="preconnect" href="https://fonts.googleapis.com/">
-    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Dangrek&amp;family=Kantumruy+Pro&amp;family=Battambang&amp;family=Fasthand&amp;family=Moulpali&amp;family=Wix+Madefor+Display:wght@400;500;600;700&amp;display=swap">
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script src="https://cdn.jsdelivr.net/npm/dayjs@1/dayjs.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/dayjs@1/locale/km.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/date-fns@3.6.0/cdn.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/date-fns@3.6.0/locale/km/cdn.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.12.1/dist/cdn.min.js" defer=""></script>
-    <script src="https://cdn.jsdelivr.net/npm/add-to-calendar-button@2" async="" defer=""></script>
-    <link rel="stylesheet" href="https://theapka.com/storage/templates/chhay/style.css?v2.5">
+        <meta name="description" content="គិម ស័កសិទ្ធិ & ងង់ ស្រីមុី">
+        <meta property="og:image" content="https://i.postimg.cc/zfXMzLmL/first.jpg">
+        <meta name="twitter:card" content="summary_large_image">
+        <meta name="twitter:image" content="https://i.postimg.cc/zfXMzLmL/first.jpg">
+        <link rel="preconnect" href="https://fonts.googleapis.com/">
+        <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Dangrek&amp;family=Kantumruy+Pro&amp;family=Battambang&amp;family=Fasthand&amp;family=Moulpali&amp;family=Wix+Madefor+Display:wght@400;500;600;700&amp;display=swap">
+        <script src="https://cdn.tailwindcss.com"></script>
+        <script src="https://cdn.jsdelivr.net/npm/dayjs@1/dayjs.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/dayjs@1/locale/km.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/date-fns@3.6.0/cdn.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/date-fns@3.6.0/locale/km/cdn.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.12.1/dist/cdn.min.js" defer=""></script>
+        <script src="https://cdn.jsdelivr.net/npm/add-to-calendar-button@2" async="" defer=""></script>
+        <link rel="stylesheet" href="https://theapka.com/storage/templates/chhay/style.css?v2.5">
     <script>
+
         dayjs.locale('km')
 
         function convertToKhmerNumerals(number) {
@@ -237,7 +238,11 @@
       display.textContent = decodeURIComponent(guestName);
     }
   }
-</script>
 
+  const paramsSearch = new URLSearchParams(window.location.search);
+    if (!paramsSearch.has("name")) {
+        document.body.innerHTML = "Page not found";
+    }
+</script>
 
 </body></html>
