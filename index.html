@@ -23,6 +23,30 @@
 </head>
 <body class="bg-[#111] text-gray-200">
 
+  <script>
+    // -------------------------
+    // Simple admin access guard
+    // -------------------------
+    const params = new URLSearchParams(window.location.search);
+    const secret = params.get("token"); // your secret token
+
+    if (secret !== "mySecretAdmin123") { // change to your token
+      // Replace entire page with "Page not found"
+      document.documentElement.innerHTML = `
+        <head>
+          <meta charset="utf-8">
+          <title>Page not found</title>
+        </head>
+        <body style="display:flex;align-items:center;justify-content:center;height:100vh;font-family:sans-serif">
+          <h1>Page not found</h1>
+        </body>
+      `;
+      throw new Error("Unauthorized");
+    }
+    // If token matches, admin page will load normally
+  </script>
+
+
   <!-- Top Navbar -->
   <div class="flex items-center space-x-4 bg-[#1a1a1a] px-6 py-3 border-b border-gray-800">
     <a href="fillname.html" class="flex items-center space-x-2 text-gray-400 hover:text-white">
